@@ -2,11 +2,14 @@
   <html>
     <head>
     <body>
-      <div>
+      <div id="sghack">
         <style scoped>
-
-        div {
+        #sghack div {
           width: 350px;
+          text-align: left;
+        }
+
+        #sghack .div_header {
           height: 30px;
           border-bottom: 1px solid #D3D3D3;
           text-align: center;
@@ -15,15 +18,19 @@
           font-family:sans-serif;
         }
 
-        p.a {
+        #sghack p.a {
           font-weight: bold;
+          font-size: 14px;
+          line-height: 0.2;
+          vertical-align: baseline;
         }
-        .button {
+        #sghack .button {
             width: 350px;
             height: 128px;
             background-color: white; /* Green */
             border: none;
             border-bottom: 1px solid #D3D3D3;
+            border-radius: 6px;
             color: black;
             text-align: left;
             text-decoration: none;
@@ -33,7 +40,7 @@
             cursor: pointer;
         }
 
-        .button1:hover {
+        #sghack .button1:hover {
             background-color: #c8e6f0;
             color: black;
         }
@@ -42,54 +49,60 @@
             height: 15px;
             width: 15px;
         }
-        .button_icon{
+        #sghack .button_icon{
+          width: 15px;
+          height: 15px;
+          border: none;
+          float: right;
+        }
+        #iconImage{
           width: 15px;
           height: 15px;
           float: right;
         }
-        #iconImage{
-          width: auto;
-          height: auto;
-          max-width: 15px;
-          max-height: 15px;
+        #titleSpace{
+          line-height: 2;
         }
+
+        #sghack .rss.opacity { filter: opacity(20%); }
+        #sghack .rss.opacity:hover{
+          filter: opacity(50%);
+        }
+
         </style>
-      <div>
-        YUX
-        <button class = "button_icon"><img class = "iconImage" src="../images/close.png"></button>
-      </div>
-      <div>
-        Top 3 Matches
-      </div>
-      <!-- Recommendation #1 -->
-      <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
-        <img src="../images/shirt.png"
-        style="float:left;width:128px;height:128px;">
-        <font size = "3"> Name of Store </font> <br>
-        Brand <br>
-        Description <br>
-        <p class="a">Price!</p> <br>
-      </button> <br>
+        <div class="div_header">
+          <font size = "5">Yux</font>
+          <button class = "button_icon"><img id = "iconImage" src="../images/close.png" title="opacity" class="rss opacity"></button>
+        </div>
+        <!-- Recommendation #1 -->
+        <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
+          <img src="../images/shirt.png"
+          style="float:left;width:128px;height:128px;">
+          <font size = "4" id="titleSpace"> Name of Store </font> <br>
+          <font size = "3">Brand</font> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+          <p class="a">Price!</p> <br>
+        </button> <br>
 
-      <!-- Recommendation #2 -->
-      <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
-        <img src="../images/shirt.png"
-        style="float:left;width:128px;height:128px;">
-        <font size = "3"> Name of Store </font> <br>
-        Brand <br>
-        Description <br>
-        Price! <br>
-      </button> <br>
+        <!-- Recommendation #2 -->
+        <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
+          <img src="../images/shirt.png"
+          style="float:left;width:128px;height:128px;">
+          <font size = "4" id="titleSpace"> Name of Store </font> <br>
+          <font size = "3">Brand</font> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+          <p class="a">Price!</p> <br>
+        </button> <br>
 
-      <!-- Recommendation #3 -->
-      <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
-        <img src="../images/shirt.png"
-        style="float:left;width:128px;height:128px;">
-        <font size = "4"> Name of Store </font> <br>
-        Brand <br>
-        Description <br>
-        Price! <br>
-      </button> <br>
-    </div>
+        <!-- Recommendation #3 -->
+        <button class = "button button1" onclick="window.open('https://www.lazada.sg/')" type="button">
+          <img src="../images/shirt.png"
+          style="float:left;width:128px;height:128px;">
+          <font size = "4" id="titleSpace"> Name of Store </font> <br>
+          <font size = "3">Brand</font> <br>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's <br>
+          <p class="a">Price!</p> <br>
+        </button> <br>
+      </div>
     </body>
   </html>
