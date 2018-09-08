@@ -9,8 +9,7 @@
       "19" : "/images/icon19.png",
       "38" : "/images/icon38.png"
     },
-    "default_title": "Screenshot Capture",
-    "default_popup": "content/popup.html"
+    "default_title": "Screenshot Capture"
   },
 
   "options_page": "/content/options.html",
