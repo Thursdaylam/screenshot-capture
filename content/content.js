@@ -151,16 +151,39 @@ var save = (image) => {
 			"deleted": 0
     }]
   }
+  let results = data.results
+
+  let description0 = results[0].description
+  let image0 = results[0].image
+  let price0 = results[0].price
+  let brand0 = results[0].brand
+
+  let description1 = results[1].description
+  let image1 = results[1].image
+  let price1 = results[1].price
+  let brand1 = results[1].brand
+
+  let description2 = results[2].description
+  let image2 = results[2].image
+  let price2 = results[2].price
+  let brand2 = results[2].brand
+
   var div = document.createElement("div");
+  div.setAttribute("id", "sghack");
   div.style.position = 'fixed';
-  div.style.top = 10;
+  div.style.top = 100;
   div.style.right = 0;
-  //div.style.backgroundColor = "#99f";
-  div.style.zIndex = "100";
+  div.style.backgroundColor = "#d3d3d3";
+  div.style.zIndex = "500";
   div.style.cursor = 'pointer';
-  div.style.width = "30%";
-  div.style.height = "80%";
-  div.innerHTML = '<embed src="../popup/popup.html"></object>';
+  div.style.width = "350px";
+  div.style.height = "470px";
+  div.innerHTML = ' <style> #sghack div { width: 350px; height: 30px; border-bottom: 1px solid #D3D3D3; text-align: center; font-weight: bold; font-size: 20px; font-family:sans-serif; } #sghack p.a { font-weight: bold; } #sghack .button { width: 350px; height: 128px;' +
+  ' background-color: white; /* Green */ border: none; border-bottom: 1px solid #D3D3D3; color: black; text-align: left; text-decoration: none; display: inline-block; -webkit-transition-duration: 0.4s; /* Safari */ transition-duration: 0.4s; cursor: pointer; } #sghack .button1:hover ' +
+  '{ background-color: #c8e6f0; color: black; } #close-image img { display: block; height: 15px; width: 15px; } #sghack .button_icon{ width: 15px; height: 15px; float: right; } #iconImage{ width: auto; height: auto; max-width: 15px; max-height: 15px; } </style>' +
+  '<br><br><br><div> YUX <button class = "button_icon"><img class = "iconImage" src="../images/close.png"></button> </div> <div> Top 3 Matches </div> <!-- Recommendation #1 --> '+
+  '<button class = "button button1" onclick="window.open(\"https://www.lazada.sg/\")" type="button"> <img src="../images/shirt.png" style="float:left;width:128px;height:128px;"> <font size = "3"> Name of Store </font> <br> Brand <br> Description <br> <p class="a">Price!</p> <br> </button> <br> <!-- Recommendation #2 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src="../images/shirt.png" style="float:left;width:128px;height:128px;"> <font size = "3"> Name of Store </font> <br> Brand <br> Description <br> Price! <br> </button> <br> <!-- Recommendation #3 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src=' + image2 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand2 +'<br>' + description2 + '<br>$' + price2 + '<br> </button> <br> ';
+  //div.innerHTML = '<div>asdfasdf</div> <div>afjhajbiasdfka</div>'
   document.body.appendChild(div)
 }
 
