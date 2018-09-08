@@ -87,10 +87,23 @@ var filename = () => {
 }
 
 var save = (image) => {
-  var link = document.createElement('a')
-  link.download = filename()
-  link.href = image
-  link.click()
+  //chrome.browserAction.setPopup({popup: "/content/popup.html"})
+
+  // var link = document.createElement('a')
+  // link.download = filename()
+  // link.href = image
+  // link.click()
+
+  var imgData = JSON.stringify(getBase64Image(image));
+  $.ajax({
+  url: 'http://url.com/rest/api',
+  dataType: 'json',
+  data: imgData,
+  type: 'POST',
+  success: function(data) {
+    console.log(data);
+    }
+  });
 }
 
 window.addEventListener('resize', ((timeout) => () => {
