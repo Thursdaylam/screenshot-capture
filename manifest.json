@@ -21,6 +21,10 @@
     "persistent": false
   },
 
+  "page_action": {
+     "default_popup": "popup.html",
+   },
+
   "web_accessible_resources": [
     "/images/Jcrop.gif",
     "/images/pixel.png"
