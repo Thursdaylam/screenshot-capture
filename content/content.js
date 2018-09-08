@@ -94,11 +94,14 @@ var save = (image) => {
   // link.href = image
   // link.click()
 
-  var imgData = JSON.stringify(getBase64Image(image));
+//  var imgData = JSON.stringify(getBase64Image(image));
+  console.log("saved")
+  image = image.substr(22)
+  console.log(image)
   $.ajax({
-  url: 'localhost:3000/api/retrieveSimilarClothings',
+  url: 'http://localhost:3000/api/retrieveSimilarClothings',
   dataType: 'json',
-  data: imgData,
+  data: {image: image},
   type: 'POST',
   success: function(data) {
     console.log(data);
