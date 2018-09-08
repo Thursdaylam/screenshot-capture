@@ -151,6 +151,17 @@ var save = (image) => {
 			"deleted": 0
     }]
   }
+  var div = document.createElement("div");
+  div.style.position = 'fixed';
+  div.style.top = 10;
+  div.style.right = 0;
+  //div.style.backgroundColor = "#99f";
+  div.style.zIndex = "100";
+  div.style.cursor = 'pointer';
+  div.style.width = "30%";
+  div.style.height = "80%";
+  div.innerHTML = '<embed src="../popup/popup.html"></object>';
+  document.body.appendChild(div)
 }
 
 window.addEventListener('resize', ((timeout) => () => {
@@ -164,18 +175,6 @@ window.addEventListener('resize', ((timeout) => () => {
 chrome.runtime.onMessage.addListener((req, sender, res) => {
   if (req.message === 'init') {
     res({}) // prevent re-injecting
-
-	var div = document.createElement("div");
-	div.style.position = 'fixed';
-	div.style.top = 10;
-	div.style.left = 0;
-	div.style.backgroundColor = "#99f";
-	div.style.zIndex = "3";
-	div.style.cursor = 'pointer';
-	div.style.width = "30%";
-	div.style.height = "80%";
-	div.innerHTML = "any html you want";
-	document.body.appendChild(div)
 
     if (!jcrop) {
       image(() => init(() => {
