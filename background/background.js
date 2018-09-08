@@ -96,6 +96,12 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
       chrome.browserAction.setBadgeText({tabId: sender.tab.id, text: ''})
     }
   }
+  else if (req.message === 'inject'){
+    console.log("inject received")
+    chrome.tabs.getSelected(null, (tab) => {
+      inject(tab)
+    })
+  }
   return true
 })
 
