@@ -96,7 +96,7 @@ var save = (image) => {
 
   var imgData = JSON.stringify(getBase64Image(image));
   $.ajax({
-  url: 'http://url.com/rest/api',
+  url: 'localhost:3000/api/retrieveSimilarClothings',
   dataType: 'json',
   data: imgData,
   type: 'POST',
