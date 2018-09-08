@@ -154,16 +154,19 @@ var save = (image) => {
   let results = data.results
 
   let description0 = results[0].description
+  let url0 = results[0].url
   let image0 = results[0].image
   let price0 = results[0].price
   let brand0 = results[0].brand
 
   let description1 = results[1].description
+  let url1 = results[1].url
   let image1 = results[1].image
   let price1 = results[1].price
   let brand1 = results[1].brand
 
   let description2 = results[2].description
+  let url2 = results[2].url
   let image2 = results[2].image
   let price2 = results[2].price
   let brand2 = results[2].brand
@@ -173,16 +176,31 @@ var save = (image) => {
   div.style.position = 'fixed';
   div.style.top = 100;
   div.style.right = 0;
-  div.style.backgroundColor = "#d3d3d3";
+  div.style.backgroundColor = "#eeeeee";
   div.style.zIndex = "500";
   div.style.cursor = 'pointer';
-  div.style.width = "350px";
-  div.style.height = "470px";
-  div.innerHTML = ' <style> #sghack div { width: 350px; height: 30px; border-bottom: 1px solid #D3D3D3; text-align: center; font-weight: bold; font-size: 20px; font-family:sans-serif; } #sghack p.a { font-weight: bold; } #sghack .button { width: 350px; height: 128px;' +
-  ' background-color: white; /* Green */ border: none; border-bottom: 1px solid #D3D3D3; color: black; text-align: left; text-decoration: none; display: inline-block; -webkit-transition-duration: 0.4s; /* Safari */ transition-duration: 0.4s; cursor: pointer; } #sghack .button1:hover ' +
-  '{ background-color: #c8e6f0; color: black; } #close-image img { display: block; height: 15px; width: 15px; } #sghack .button_icon{ width: 15px; height: 15px; float: right; } #iconImage{ width: auto; height: auto; max-width: 15px; max-height: 15px; } </style>' +
-  '<br><br><br><div> YUX <button class = "button_icon"><img class = "iconImage" src="../images/close.png"></button> </div> <div> Top 3 Matches </div> <!-- Recommendation #1 --> '+
-  '<button class = "button button1" onclick="window.open(\"https://www.lazada.sg/\")" type="button"> <img src=' + image0 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand0 +'<br>' + description0 + '<br>$' + price0 + '<br> </button> <br> <!-- Recommendation #2 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src=' + image1 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand1 +'<br>' + description1 + '<br>$' + price1 + '<br> </button> <br> <!-- Recommendation #3 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src=' + image2 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand2 +'<br>' + description2 + '<br>$' + price2 + '<br> </button> <br> ';
+  div.style.width = "336px";
+  div.style.overflow = "hidden"
+  div.style.marginTop = "60px";
+  div.style.marginRight = "30px";
+  div.style.borderRadius = "3px";
+  div.style.boxShadow = "1px 1px 10px rgba(34,34,34,0.6)";
+  div.innerHTML = '<style> #sghack div { width: 336px; text-align: left;} #sghack .div_header { height: 30px; border-bottom: 1px solid #DDDDDD; text-align: center; font-weight: bold; font-size: 20px; font-family:sans-serif; padding:8px; margin-top:2px; margin-bottom:6px; background-color: #FEFFFF;}' +
+'#sghack p.a { font-weight: bold; font-size: 20px; margin: 0px; margin-top: 0px; margin-bottom:0px;} #sghack p.b { font-size: 12px; line-height: 1.6; margin-bottom: -28px;}' +
+'#sghack span.a { font-size: 25px; font-weight: bold; line-height: 1.2;} #sghack .button { width: 320px; height: auto; margin: 8px; margin-top: 0px; background-color: white; border: 1px solid #D5D5D5; border-radius: 6px; color: black; text-align: left; text-decoration: none; display: inline-block; -webkit-transition-duration: 0.4s; /* Safari */ transition-duration: 0.4s; cursor: pointer;}' +
+'#sghack .button1:hover { background-color: #c8e6f0; color: black;} ' +
+'#sghack .button_icon{ width: 20px; height: 20px; border: none; float: right; background-color: #feffff; margin-top: 4px; margin-right: 8px} #iconImage{ width: 20px; height: 20px; float: right;}' +
+'#sghack .rss.opacity { filter: opacity(20%); } #sghack .rss.opacity:hover{ filter: opacity(50%);} </style>' +
+'<div class="div_header"><font size = "5">Yux</font><button class = "button_icon"><img id = "iconImage" src="http://cdn.onlinewebfonts.com/svg/img_127536.png" title="opacity" class="rss opacity"></button></div>' +
+'<!-- Recommendation #1 --><a href='+ url0 +' style="text-decoration:none; color: black;"><button class = "button button1" type="button"><img src=' + image0 +' style="float:left;width:118px;height:auto;margin-right:10px;"> <br><br> <span class="a">ZALORA</span><br> <font size = "3">' + brand0 +'</font> <br> <p class = "b">' + description0 + '<p><br> <p class="a">$' + price0 + '</p> <br> </button> <br></a>' +
+'<!-- Recommendation #2 --><a href='+ url1 +' style="text-decoration:none; color: black;"><button class = "button button1" type="button"><img src=' + image1 +' style="float:left;width:118px;height:auto;margin-right:10px;"> <br><br> <span class="a">Zalora</span><br> <font size = "3">' + brand1 +'</font> <br> <p class = "b">' + description1 + '<p><br> <p class="a">$' + price1 + '</p> <br> </button> <br></a>' +
+'<!-- Recommendation #3 --><a href='+ url2 +' style="text-decoration:none; color: black;"><button class = "button button1" type="button"><img src=' + image2 +' style="float:left;width:118px;height:auto;margin-right:10px;"> <br><br> <span class="a">ZALORA</span><br> <font size = "3">' + brand2 +'</font> <br> <p class = "b">' + description2 + '<p><br> <p class="a">$' + price2 + '</p> <br> </button> <br></a></div>'
+
+  // div.innerHTML = ' <style> #sghack div { width: 350px; height: 30px; border-bottom: 1px solid #D3D3D3; text-align: center; font-weight: bold; font-size: 20px; font-family:sans-serif; } #sghack p.a { font-weight: bold; } #sghack .button { width: 350px; height: 128px;' +
+  // ' background-color: white; /* Green */ border: none; border-bottom: 1px solid #D3D3D3; color: black; text-align: left; text-decoration: none; display: inline-block; -webkit-transition-duration: 0.4s; /* Safari */ transition-duration: 0.4s; cursor: pointer; } #sghack .button1:hover ' +
+  // '{ background-color: #c8e6f0; color: black; } #close-image img { display: block; height: 15px; width: 15px; } #sghack .button_icon{ width: 15px; height: 15px; float: right; } #iconImage{ width: auto; height: auto; max-width: 15px; max-height: 15px; } </style>' +
+  // '<br><br><br><div> YUX <button class = "button_icon"><img class = "iconImage" src="../images/close.png"></button> </div> <div> Top 3 Matches </div> <!-- Recommendation #1 --> '+
+  // '<button class = "button button1" onclick="window.open(\"https://www.lazada.sg/\")" type="button"> <img src=' + image0 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand0 +'<br>' + description0 + '<br>$' + price0 + '<br> </button> <br> <!-- Recommendation #2 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src=' + image1 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand1 +'<br>' + description1 + '<br>$' + price1 + '<br> </button> <br> <!-- Recommendation #3 --> <button class = "button button1" onclick="window.open("https://www.lazada.sg/")" type="button"> <img src=' + image2 +' style="float:left;width:128px;height:128px;"> <font size = "4"> Zalora </font> <br>' + brand2 +'<br>' + description2 + '<br>$' + price2 + '<br> </button> <br> ';
   //div.innerHTML = '<div>asdfasdf</div> <div>afjhajbiasdfka</div>'
   document.body.appendChild(div)
 }
