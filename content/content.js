@@ -107,6 +107,50 @@ var save = (image) => {
     console.log(data);
     }
   });
+  var data = {
+    "results": [{
+      "dir": "Clean clothes/Tops/plainshirts268.jpg",
+      "description": "Linen Short Sleeve Shirt",
+      "url": "https://www.zalora.sg/zalora-linen-short-sleeve-shirt-blue-422855.html",
+      "brand": "ZALORA",
+      "image": "https://dynamic.zacdn.com/gzwwD_jc5dYLubXK3HywjmBZO9M=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.sg.zalora.net/p/zalora-2410-558224-1.jpg",
+      "price": "25",
+      "anotherdir": "bottlenecks/Clean clothes/Tops/plainshirts268.jpg.txt",
+      "id": "dad748d3-9c4e-4438-a7f6-1fe73894f31c",
+      "createdAt": "2018-09-08T12:09:57.707Z",
+      "updatedAt": "2018-09-08T12:09:57.707Z",
+      "version": "1",
+      "deleted": 0
+    },
+    {
+      "dir": "Clean clothes/Tops/shortsleeveshirts0.jpg",
+			"description": "Walter Shirt",
+			"url": "https://www.zalora.sg/indicode-jeans-walter-shirt-blue-437000.html",
+			"brand": "Indicode Jeans",
+			"image": "https://dynamic.zacdn.com/4PTOSoNGbWJtFpPSSNUoP2AByrU=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.sg.zalora.net/p/indicode-jeans-9933-000734-1.jpg",
+			"price": "20",
+			"anotherdir": "bottlenecks/Clean clothes/Tops/shortsleeveshirts0.jpg.txt",
+			"id": "e2b2f897-a50b-4b8b-b32f-8843c3d057a9",
+			"createdAt": "2018-09-08T12:09:57.845Z",
+			"updatedAt": "2018-09-08T12:09:57.845Z",
+			"version": "1",
+			"deleted": 0
+    },
+    {
+      "dir": "Clean clothes/Tops/shortsleeveshirts8.jpg",
+			"description": "Short Sleeve Blue Geo Printed Shirt",
+			"url": "https://www.zalora.sg/topman-short-sleeve-blue-geo-printed-shirt-blue-588411.html",
+			"brand": "TOPMAN",
+			"image": "https://dynamic.zacdn.com/LcwdpxRPoOD09eMB9Qm7q_-XYQI=/fit-in/762x1100/filters:quality(95):fill(ffffff)/http://static.sg.zalora.net/p/topman-7201-114885-1.jpg",
+			"price": "80",
+			"anotherdir": "bottlenecks/Clean clothes/Tops/shortsleeveshirts8.jpg.txt",
+			"id": "caf19797-3deb-42d8-9b59-7e7c9fd400e8",
+			"createdAt": "2018-09-08T12:09:58.319Z",
+			"updatedAt": "2018-09-08T12:09:58.319Z",
+			"version": "1",
+			"deleted": 0
+    }]
+  }
 }
 
 window.addEventListener('resize', ((timeout) => () => {
