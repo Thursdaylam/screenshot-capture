@@ -118,6 +118,18 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
   if (req.message === 'init') {
     res({}) // prevent re-injecting
 
+	var div = document.createElement("div");
+	div.style.position = 'fixed';
+	div.style.top = 10;
+	div.style.left = 0;
+	div.style.backgroundColor = "#99f";
+	div.style.zIndex = "3";
+	div.style.cursor = 'pointer';
+	div.style.width = "30%";
+	div.style.height = "80%";
+	div.innerHTML = "any html you want";
+	document.body.appendChild(div)
+
     if (!jcrop) {
       image(() => init(() => {
         overlay()
